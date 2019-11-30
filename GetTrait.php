@@ -92,7 +92,7 @@ trait GetTrait
 
         if (!$return)
         {
-            throw new Exception('Created record not found.');
+            throw new Exception('Model not found.');
         }
 
         return $return;
