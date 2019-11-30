@@ -1,0 +1,9 @@
+{
+    "name": "denis909/yii2-get-trait",
+    "license": "MIT",
+	"autoload": {
+		"psr-4": {
+            "denis909\\yii\\": ""
+		}
+	}
+}
