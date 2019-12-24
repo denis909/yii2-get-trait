@@ -9,21 +9,21 @@ use Throwable;
 trait GetTrait
 {
 
-	public static function get(array $where, $create = false, $attributes = [])
-	{
-		$model = static::find()
-			->where($where)
-			->one();
+    public static function get(array $where, $create = false, $attributes = [])
+    {
+        $model = static::find()
+            ->where($where)
+            ->one();
 
         if ($model)
         {
             return $model;
         }    
-	
-		if (!$create)
-		{
-			return null;
-		}
+    
+        if (!$create)
+        {
+            return null;
+        }
 
         $transaction = Yii::$app->db->beginTransaction();
 
@@ -88,7 +88,7 @@ trait GetTrait
             throw $e;
         }
 
-		$return = static::get($where, false, $attributes);
+        $return = static::get($where, false, $attributes);
 
         if (!$return)
         {
@@ -96,6 +96,6 @@ trait GetTrait
         }
 
         return $return;
-	}
-	
+    }
+    
 }
